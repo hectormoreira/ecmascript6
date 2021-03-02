@@ -46,27 +46,78 @@ console.log(person.name, person.age);
 let { name } = person;
 console.log(name);
 
-
 //Spread Operator
-let team1 = ['Oscar', 'Julian', 'Ricardo'];
-let team2 = ['Valeria', 'Yessica', 'Camila'];
+let team1 = ["Oscar", "Julian", "Ricardo"];
+let team2 = ["Valeria", "Yessica", "Camila"];
 
-let education = ['David', ...team1, ...team2 ];
+let education = ["David", ...team1, ...team2];
 console.log(education);
 
 //es6
 //let > Disponible solo dentro del scope
 //var > Disponible global
 {
-    var globalVar = "Global Var";
+  var globalVar = "Global Var";
 }
 
 {
-    let globalLet = "Gloval Let";
-    console.log(globalLet);
+  let globalLet = "Gloval Let";
+  console.log(globalLet);
 }
 console.log(globalVar);
 
 //const > Constante que no cambia, no es posoble cambiar su valor
-const a = 'b';
+const a = "b";
 // no es posible a = 'c'
+
+//Objetos
+let name = "Hector";
+let age = 32;
+//es5
+let obj = { name: name, age: age };
+//es6
+let obj2 = { name, age };
+console.log(obj2);
+
+
+// arrow functions > Funciones anónimas que retornan un valor
+const names = [
+  { name: "Hector", age: 29 },
+  { name: "Yessica", age: 29 },
+];
+//es5
+let listOfNames = names.map(function (item) {
+  console.log(item.name);
+});
+//es6
+let listOfNames2 = names.map((item) => console.log(item.name));
+
+const listOfNames3 = (name, age, country) => {
+  //code
+};
+
+const listOfNames4 = (name) => {
+  //code
+};
+
+const square = (num) => num * num;
+
+
+//Promesas
+const helloPromise = () =>{
+    //Se retorna nueva Promise que devuelve 2 elementos: resolve o reject
+    return new Promise((resolve, reject) => {
+        if (true) {
+            //promesa resuelta
+            resolve('Hey!');
+        }else{
+            //promesa rechazada
+            reject('Ups!!');
+        }
+    });
+}
+
+helloPromise()
+    .then(response => console.log(response))
+    .then(() => console.log('Hello'))
+    .catch(error => console.log(error))

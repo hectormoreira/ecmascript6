@@ -79,7 +79,6 @@ let obj = { name: name, age: age };
 let obj2 = { name, age };
 console.log(obj2);
 
-
 // arrow functions > Funciones anónimas que retornan un valor
 const names = [
   { name: "Hector", age: 29 },
@@ -102,22 +101,58 @@ const listOfNames4 = (name) => {
 
 const square = (num) => num * num;
 
-
 //Promesas
-const helloPromise = () =>{
-    //Se retorna nueva Promise que devuelve 2 elementos: resolve o reject
-    return new Promise((resolve, reject) => {
-        if (true) {
-            //promesa resuelta
-            resolve('Hey!');
-        }else{
-            //promesa rechazada
-            reject('Ups!!');
-        }
-    });
-}
+const helloPromise = () => {
+  //Se retorna nueva Promise que devuelve 2 elementos: resolve o reject
+  return new Promise((resolve, reject) => {
+    if (true) {
+      //promesa resuelta
+      resolve("Hey!");
+    } else {
+      //promesa rechazada
+      reject("Ups!!");
+    }
+  });
+};
 
 helloPromise()
-    .then(response => console.log(response))
-    .then(() => console.log('Hello'))
-    .catch(error => console.log(error))
+  .then((response) => console.log(response))
+  .then(() => console.log("Hello"))
+  .catch((error) => console.log(error));
+
+//POO
+//Clases, modulos, generadores
+class calculator {
+  constructor() {
+    this.valueA = 0;
+    this.valueB = 0;
+  }
+  sum(valueA, valueB) {
+    this.valueA = valueA;
+    this.valueB = valueB;
+    return this.valueA + this.valueB;
+  }
+}
+
+const calc = new calculator();
+console.log(calc.sum(2, 2));
+
+//modulo
+import { hello } from "./module";
+hello();
+
+//generadores
+function* helloWorld() {
+  if (true) {
+    yield "Hello, ";
+  }
+
+  if (true) {
+    yield "World";
+  }
+}
+
+const generatorHello = helloWorld();
+console.log(generatorHello.next().value);
+console.log(generatorHello.next().value);
+console.log(generatorHello.next().value);

@@ -24,10 +24,11 @@ console.log(hello2.trimEnd());
 
 
 //Podemos no pasar Error en catch y tomarlo directamente
+// Optional Catch Binding
 try {
     
 } catch {
-    error
+    error//optional
 }
 
 // fromEntries

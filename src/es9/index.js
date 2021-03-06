@@ -1,5 +1,5 @@
 //Principales novedades de ECMAScript 9
-//spread operator
+//spread operator object
 const obj = {
   name: "Hector",
   age: 32,

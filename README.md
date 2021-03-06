@@ -35,4 +35,4 @@ Repo/Notas del [Curso de ECMAScript 6+](https://platzi.com/clases/ecmascript-6/)
 - Optional Catch Binding
 - Object fromEntries
 - Symbol
-- El comité técnico [TC39](https://tc39.es/) se encarga de las revisiones y propuestas par ECMAScript
+- El comité técnico [TC39](https://tc39.es/) se encarga de las revisiones y propuestas para ECMAScript

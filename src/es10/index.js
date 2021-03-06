@@ -30,5 +30,14 @@ try {
     error
 }
 
-//*** */
-let entries 
+// fromEntries
+let entries = [["name","Hector"],["age", 29]];
+console.log(Object.fromEntries(entries));
+//{ name: 'Hector', age: 29 }
+
+
+//objeto de tipo simbolo
+let mySymbol = `My Symbol`;
+let symbol = Symbol(mySymbol);
+console.log(symbol.description);
+
